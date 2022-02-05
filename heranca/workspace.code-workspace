@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\Users\\drummoniana\\Desktop\\Formacao Dev-Javascript"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Formacao Dev-Javascript",
+		"git.ignoreLimitWarning": true
+	}
+}

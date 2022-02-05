@@ -13,7 +13,6 @@
        }
        
    }
-
    class CPF extends Documento
    {
        public function validar():bool
