@@ -1,51 +1,55 @@
 <?php
 
+// Table Data Gateway: responsável pelo o transporte de dados vindo diretamente do 
+// banco de dados. Ele um portão onde será feita essa conexão para que 
+// o mesmo possa extrair informações vindo do banco.
+
+// stateless
+
 class ProdutoGateway 
-
-//stateless = Não guarda estado entre requisições 
 {
-
+    // Guarda a conexão com o banco de dados
     private static $conn;
 
-    public static function setConnection(PDO $conn)//
+    public static function setConnection(PDO $conn)
     {
         self::$conn = $conn;
     }
 
-    public static function all($filter = '', $class = 'stdClass')
-    { //
+    public static function all($filter = '',$class = 'stdClass')
+    {
         $sql = "SELECT * FROM produtos";
-        if($filter)//
+        if($filter)
         {
-            $sql .= " WHERE $filter ";
+            $sql .= " WHERE {$filter}";
         }
+
         $result = self::$conn->prepare($sql);
         $result->execute();
         return $result->fetchAll(PDO::FETCH_CLASS,$class);
     }
-    
 
-    // Retorna um único registro
-    public static function find($id, $class)
+    public static function find($id,$class = 'stdClass')
     {
         $sql = "SELECT * FROM produtos WHERE id = :id";
         $result = self::$conn->prepare($sql);
-        $result->bindParam(':id', $id);
+        $result->bindParam(':id',$id);
         $result->execute();
         return $result->fetchObject($class);
     }
 
-    // Save/Update
     public static function save($data)
     {
         if(empty($data->id))
         {
-            
+            $id = ProdutoGateway::getLastId() + 1;
+
             // save
-            $sql = "INSERT INTO produtos(descricao,estoque,preco_custo,preco_venda,codigo_barra,data_cadastro,origem)
-                    VALUES(:descricao,:estoque,:preco_custo,:preco_venda,:codigo_barra,:data_cadastro,:origem)";
+            $sql = "INSERT INTO produtos(id,descricao,estoque,preco_custo,preco_venda,codigo_barra,data_cadastro,origem)
+                    VALUES(:id,:descricao,:estoque,:preco_custo,:preco_venda,:codigo_barra,:data_cadastro,:origem)";
 
             $result = self::$conn->prepare($sql);
+            $result->bindParam(':id',$id);
             $result->bindParam(':descricao',$data->descricao);
             $result->bindParam(':estoque',$data->estoque);
             $result->bindParam(':preco_custo',$data->preco_custo);
@@ -76,30 +80,21 @@ class ProdutoGateway
 
     public static function delete($id)
     {
-        $sql = "DELETE FROM produtos WHERE id = :id";// :id é um placeholder
-        $result = self::$conn->prepare($sql);// prepara a query
-        $result->bindParam(':id', $id);// bindParam é um placeholder
-        print "$sql";// imprime a query
-        return $result->execute();//executa a query
+        $sql = "DELETE FROM produtos WHERE id = :id";
+        $result = self::$conn->prepare($sql);
+        $result->bindParam(':id',$id);
+        $result->execute();
+        print "{$sql}";
     }
 
     public static function getLastId()
     {
-        $sql = "SELECT MAX(id) as max FROM produtos"; //  :id é um placeholder,
+        $sql = "SELECT MAX(id) as max FROM produtos";
         $result = self::$conn->prepare($sql);
         $result->execute();
         $result = $result->fetch(PDO::FETCH_OBJ);
         return $result->max;
     }
-
-
 }
 
 
-
-
-
-
-
-
-// Método estático: ela pertence a classe 

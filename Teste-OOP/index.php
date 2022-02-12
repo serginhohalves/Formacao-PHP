@@ -11,6 +11,7 @@ try
     // $conn = new PDO('mysql:host=localhost;dbname=estoque','root','');
     // Produto::setConnection($conn);
 
+
     // print '<pre>';
     // print_r(Produto::find(25));
     // print '<pre>';

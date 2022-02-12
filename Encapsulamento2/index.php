@@ -5,15 +5,18 @@
     
 
 
-    // $objeto = new Pessoa();
-    $objeto = new Programador();
+    $objeto = new Pessoa();
+    $objeto->verDados();
+    // $objeto = new Programador();
 
-    // echo $objeto->nome . "<br";
+    // echo $objeto->nome . "<br>";
+    // echo $objeto->idade . "<br>";
     // echo $objeto->idade . "<br";
     // echo $objeto->senha . "<br"; 
 
-    $objeto->verDados();
+    // $objeto->verDados();
 
+    // $objeto->verDados();
 
 
 ?>
