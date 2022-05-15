@@ -1,0 +1,249 @@
+/* You can add global styles to this file, and also import other style files */
+/*************************************
+               NORMALIZE
+**************************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.container {
+    margin: auto;
+    width: 35%;
+}
+
+
+
+/*************************************
+                HERPERS
+**************************************/
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pt-150 {
+    padding-top: 150px;
+}
+
+.text-muted {
+    font-size: 23px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.display-1 {
+    font-weight: normal;
+    font-size: 55px;
+}
+
+.display-2 {
+    font-weight: normal;
+    font-size: 50px;
+}
+
+.display-3 {
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.display-4 {
+    font-weight: normal;
+    font-size: 35px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.grid {
+    display: grid;
+} 
+
+.grid-template-column-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.d-grid-gap-column-25 {
+    grid-column-gap: 25px;
+}
+
+.d-grid-gap-row-25 {
+    grid-row-gap: 25px;
+}
+
+.d-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.d-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.d-grid-4 {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.btn {
+    padding: 15px;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.default {
+    background: #8257E5;
+    color: #fff;
+    border: solid 1px #8257E5;
+}
+
+.btn-success {
+    background: #2ecc71;
+    color: #fff;
+    border: solid 1px #2ecc71;
+}
+
+.form-control {
+  padding: 15px;
+  outline: none;
+  font-size: 16px;
+  color: #444;
+  border: solid 1px #cecece;
+  box-shadow: 0 0 10px rgba(0,0,0, .1); 
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card {
+    border: solid 1px #cecece;
+    box-shadow: 0 0 10px rgba(0,0,0, .1);
+    padding: 25px;
+    border-radius: 7px;
+    background: #202024;
+    color: #fff;
+    border-left: #8257E5 15px solid;
+}
+
+.main__list_item {
+    display: flex;
+}
+
+.main__list_item li {
+    padding: 20px;
+    margin-right: 15px;
+    border-radius: 3px;
+    border: solid 1px #cecece;
+    cursor: pointer;
+    border: #8257E5 solid 1px;
+}
+
+.active {
+    background: #8257E5;
+}
+

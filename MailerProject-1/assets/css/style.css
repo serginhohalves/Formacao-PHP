@@ -1,0 +1,8 @@
+@import url('./helpers.css');
+
+/* Your code runs here... */
+.main-mailer-form {
+    border: solid 1px #cecece;
+    padding: 30px;
+    border-radius: 5px;
+}

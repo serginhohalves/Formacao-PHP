@@ -1,0 +1,2 @@
+2022-04-28 00:28:32 SELECT * FROM produtos WHERE id = :id
+2022-04-28 00:29:06 SELECT * FROM produtos
