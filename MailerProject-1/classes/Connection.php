@@ -4,6 +4,7 @@
 class Connection
 {
     public static function open($database)
+    
     {
         if(file_exists("./config/{$database}.ini"))
         {

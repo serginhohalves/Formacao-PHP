@@ -5,7 +5,7 @@ try
 {
     $conn = new PDO('mysql:host=localhost;dbname=estoque','root','');
     ProdutoGateway::setConnection($conn);
-
+    
 
     // $produto = Produto::find(26);
     // print_r($produto->getMargemLucro());

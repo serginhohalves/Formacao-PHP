@@ -47,6 +47,7 @@ class Record
     {
         unset($this->data['id']);
     }
+    //Clone é um metodo que é chamado quando o objeto é clonado.
 
     public function fromArray($data)
     {
@@ -63,6 +64,7 @@ class Record
         $classe = get_class($this);
         return constant($classe  ."::TABLENAME");
     }
+    //getEntity é um metodo que é chamado quando o objeto é clonado.
 
     public static function find($id)
     {

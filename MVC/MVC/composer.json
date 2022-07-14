@@ -1,0 +1,20 @@
+{
+    "name":"vendor/design_patterns_mvc",
+    "description":"Este projeto é apenas para teste de conhecimento",
+    "authors": [
+        {"name":"Sérgio","email":"serginho.halves@hotmail.com"}
+    ],
+    "autoload": {
+        "classmap": ["App","Lib"],
+        "psr-4": {
+            "SourceLib\\": "Lib/",
+            "SourceApp\\": "App/"
+        }
+    },
+    "required": {},
+    "config": {
+        "platform": {
+            "php": "7.4.3"
+        }
+    }
+}

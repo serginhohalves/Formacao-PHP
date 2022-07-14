@@ -35,7 +35,7 @@ class Repository
             } 
 
             if($offset)
-            {
+            {   
                 $sql .= "OFFSET" . $limit;
             }
 
